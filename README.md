@@ -77,3 +77,25 @@ Linux与OSX用户可以在命令行终端下通过以下命令以后台进程方
 		<以下代码省略..>
 
 	kylin({ port: 1080 });
+	
+	
+新增功能 @author meiqingguang
+----
+### 替换规则
+类似fiddler的替换规则，可以将url替换为本地文件，支持正则表达式。用如下方式配置规则
+
+	kylin({
+		port: 1080,
+		rules: [{ 
+			match: 'www.baidu.com',
+			action: 'c:/index.html'
+		}]
+	});
+	
+### 二级代理
+可以设置二级代理地址。适用于fiddler调试，等场景。
+
+	kylin({
+		port: 1080,
+		next: {ip: '127.0.0.1', port: '8888'}
+	});
