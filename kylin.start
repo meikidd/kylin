@@ -1,11 +1,9 @@
 var kylin = require('kylin');
 
-kylin({ port: 1080 ,
-		rules: [
-		{
+kylin({ port: 1080 /*,
+		rules: [{
 			match: 'http://www.baidu.com',
 			action: 'C:/Users/Administrator/AppData/Roaming/npm/node_modules/kylin/package.json'
-		}
-		],
-		nextProxy: '127.0.0.1:8888'
+		}],
+		nextProxy: '127.0.0.1:8888'*/
 	});
